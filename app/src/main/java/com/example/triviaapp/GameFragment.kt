@@ -14,10 +14,6 @@ import com.example.triviaapp.databinding.FragmentTitleBinding
 
 class GameFragment : Fragment() {
 private lateinit var binding: FragmentGameBinding
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(
 
