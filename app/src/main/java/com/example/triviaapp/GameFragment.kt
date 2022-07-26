@@ -23,14 +23,16 @@ private lateinit var binding: FragmentGameBinding
        binding=DataBindingUtil.inflate(inflater,R.layout.fragment_game,container,false)
        //binding.submitbutton.setOnClickListener( Navigation.createNavigateOnClickListener(R.id.action_gameFragment_to_gameOverFragment))
        binding.submitbutton.setOnClickListener { v:View->
-           val sub=3
+           val sub=2
            if(sub==2)
            {
-               v.findNavController().navigate(R.id.action_gameFragment_to_gameOverFragment)
+               v.findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameWonFragment(45,8))
+               //v.findNavController().navigate(R.id.action_gameFragment_to_gameOverFragment)
            }
            else
            {
-              v.findNavController().navigate(R.id.action_gameFragment_to_gameWonFragment)
+               v.findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameOverFragment())
+             // v.findNavController().navigate(R.id.action_gameFragment_to_gameWonFragment)
            }
        }
 
