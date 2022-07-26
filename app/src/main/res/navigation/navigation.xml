@@ -61,4 +61,9 @@
         tools:layout="@layout/fragment_about"
         android:name="com.example.triviaapp.AboutFragment"
         android:label="AboutFragment" />
+    <fragment
+        android:id="@+id/ruleFragment"
+        tools:layout="@layout/fragment_rule"
+        android:name="com.example.triviaapp.RuleFragment"
+        android:label="RuleFragment" />
 </navigation>
