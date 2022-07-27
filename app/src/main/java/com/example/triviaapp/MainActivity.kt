@@ -9,6 +9,7 @@ import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.triviaapp.databinding.ActivityMainBinding
+import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {
     private lateinit var drawerLayout:DrawerLayout
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding=DataBindingUtil.setContentView(this,R.layout.activity_main)
+        Timber.i("hello this is main activity's timber and on create is called")
         val navController=this.findNavController(R.id.myNavHostFragment)
         drawerLayout=binding.drawerLayout
         NavigationUI.setupActionBarWithNavController(this,navController,drawerLayout)
